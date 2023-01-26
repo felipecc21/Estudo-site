@@ -10,7 +10,16 @@
   <source src="movie.ogg" type="video/ogg">
 Your browser does not support the video tag.
 </video>
-
+ <h1>Webcam</h1>
+    <video id="webcam" width="640" height="480" autoplay></video>
+    <script>
+      // Acessa a webcam
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function(stream) {
+          // Exibe a imagem da webcam no elemento <video>
+          document.querySelector('#webcam').srcObject = stream;
+        });
+    </script>
 
 </body>
 </html> 
