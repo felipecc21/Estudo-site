@@ -1,0 +1,53 @@
+
+
+
+
+
+body {
+  background-color: black;
+  color: green;
+  font-family: Courier, sans-serif;
+  /*background-image: URL("./img/matrix2.gif");
+  background-size: 5cm 600cm ;
+  background-position: right;
+  background-repeat: no-repeat;*/
+  
+  
+  /*comentarios*/
+}
+
+.Aviso_GPT {
+	
+
+text-align: center;
+	
+}
+
+@font-face {
+
+font-family: "Awesome";	
+font-style: normal;
+src: local("C:\Users\felip\OneDrive\Área de Trabalho\Estudo site\font\antique_book_cover.otf") formart ("otf");
+	
+}
+
+/* unvisited link */
+a:link {
+  color: #FF0000;
+}
+
+/* visited link */
+a:visited {
+  color: #00FF00;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+}
+
