@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma ( Futura Calculadora)</title>
+</head>
+
+<body>
+    <h1>Somatória de dois números inteiros</h1>
+</body>
+<form name="MeuFormulario" action="" method="post">
+    Entre com o primeiro valor: <input type="text" name="f_n1" />
+    <p></p>
+    Entre com o segundo valor: <input type="text" name="f_n2" />
+    <p></p>
+    <input type="button" name="btn_somar" value="Somar" onclick="soma()" />
+    <input type="reset" name="btn_reset" value="Apagar" />
+</form>
+<script lang="Javascript">
+    function soma(){
+
+//Declarando variaveis
+    var js_n1;
+    var js_n2;
+    var js_soma;
+
+    //Entrada de dados
+    js_n1 = parseInt(document.MeuFormulario.f_n1.value);
+    js_n2 = parseInt(document.MeuFormulario.f_n2.value);
+    
+    //Processando Dados
+    js_soma =js_n1+js_n2;
+    
+    // Saida de Dados
+window.alert('Resultado: ' + js_soma.toString());
+
+    }
+</script>
+
+</html>

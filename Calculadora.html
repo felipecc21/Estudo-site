@@ -3,67 +3,33 @@
 
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="./CSS/reset.css">
+	<link rel="stylesheet" href="./CSS/calc.css">
 	<title>Calculadora em JS</title>
+
 </head>
 
 <body>
+	<form class="calc_form" action="" method="post">
+
+		<img src="./img/calc.png" alt="Calculadora">
+		<input name="N1" class="numero_forms" type="text" placeholder="Digite um número">
+		<input name="N2" class="numero_forms" type="text" placeholder="Digite um número">
+		<input name="resultado" class="numero_forms" type="text" placeholder="Resultado">
+
+
+		<div class="botoes_container">
+			<button name="soma"class="botoes" type="submit">Somar</button>
+			<button name="diminui"  class="botoes" type="submit">Diminuir</button>
+			<button  name="multiplica" class="botoes" type="submit">Multiplicar</button>
+			<button name="dividir"  class="botoes" type="submit">Dividir</button>
+		</div>
+	</form>
+
+
+
 </body>
-<script type="text/javascript">
+<!--<script src="JS/calc.js"></script>-->
 
-	var operacao = prompt("Qual operação deseja realizar? ");
-	var numero1 = prompt("Insira o primeiro número: ");
-	var numero2 = prompt("Insira o segundo número: ");
-	var resultadoOperacao = 0;
-
-	//Variaveis para validar os operadores
-
-	var operacoesValidasSoma = ["Soma", "Somar", "soma", "somar", "+"];
-	var operacoesValidasSubtracao = ["subtrair", "subtração", "Subtrair", "Subtração", "-"];
-	var operacoesValidasDivisao = ["Divisão", "Dividir", "divisão", "dividir", "/"];
-	var operacoesValidasMultiplicacao = ["Multiplicação", "Multiplicar", "multiplicação", "multiplicar", "*"];
-
-
-	// Verificando o operador
-
-	if (operacoesValidasSoma.includes(operacao)) {
-		resultadoOperacao = soma(numero1, numero2);
-	}
-	
-
-	if (operacoesValidasSubtracao.includes(operacao)) {
-		resultadoOperacao = subtracao(numero1, numero2);
-	}
-
-	if (operacoesValidasDivisao.includes(operacao)) {
-		resultadoOperacao = divisao(numero1, numero2);
-	}
-
-	if (operacoesValidasMultiplicacao.includes(operacao)) {
-		resultadoOperacao = multiplicacao(numero1, numero2);
-	}
-
-
-
-
-	alert("O resultado da operação é: " + resultadoOperacao);
-
-	// Funçoes
-
-	function soma(numero1, numero2) {
-		return parseInt(numero1) + parseInt(numero2);
-	}
-
-	function subtracao(numero1, numero2) {
-		return parseInt(numero1) - parseInt(numero2);
-	}
-
-	function divisao(numero1, numero2) {
-		return parseInt(numero1) / parseInt(numero2);
-	}
-
-	function multiplicacao(numero1, numero2) {
-		return parseInt(numero1) * parseInt(numero2);
-	}
-</script>
 
 </html>
