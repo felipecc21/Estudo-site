@@ -4,11 +4,34 @@
     flex-direction: column;
     height: 100vh;
     justify-content: center;
+    width: 100%
 }
-.calc_form img{
+
+.calc_form img {
     width: 310px;
-    padding-bottom : 5px;
+    padding-bottom: 5px;
+    transform: translatey(0px);
+    animation: float 5s ease-in-out infinite;
+
 }
+
+@keyframes float {
+
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-30px);
+    }
+
+    100% {
+
+        transform: translatey(0px);
+    }
+
+}
+
 .numero_forms {
     border: 2px solid #333;
     border-radius: 8px;
@@ -30,11 +53,12 @@
     font-size: 1em;
     max-width: 100px;
     padding: 15px;
-  }
+}
 
-  .botao-container {
+.botao-container {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    
+
+
 }

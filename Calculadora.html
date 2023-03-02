@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="./CSS/reset.css">
 	<link rel="stylesheet" href="./CSS/calc.css">
 	<title>Calculadora em JS</title>
@@ -10,26 +11,32 @@
 </head>
 
 <body>
-	<form class="calc_form" action="" method="post">
+	<form name="calc_form" class="calc_form" action="" method="post">
 
 		<img src="./img/calc.png" alt="Calculadora">
-		<input name="N1" class="numero_forms" type="text" placeholder="Digite um número">
-		<input name="N2" class="numero_forms" type="text" placeholder="Digite um número">
-		<input name="resultado" class="numero_forms" type="text" placeholder="Resultado">
+		<input id="n1" class="numero_forms" type="number" placeholder="Digite um número">
+		<input id="n2" class="numero_forms" type="number" placeholder="Digite um número">
+		<!--<input id="resultado" class="numero_forms" type="text" placeholder="Resultado" value="">-->
+		<span class="numero_forms">
+			<font color="#333">Resultado</font>
+		</span>
 
 
 		<div class="botoes_container">
-			<button name="soma"class="botoes" type="submit">Somar</button>
-			<button name="diminui"  class="botoes" type="submit">Diminuir</button>
-			<button  name="multiplica" class="botoes" type="submit">Multiplicar</button>
-			<button name="dividir"  class="botoes" type="submit">Dividir</button>
+
+			<button type="button" onclick="somar()" class="botoes">Somar</button>
+			<button type="button" onclick="subtrair()" class="botoes">Diminuir</button>
+			<button type="button" onclick="dividir()" class="botoes">Dividir</button>
+			<button type="button" onclick="multiplicar()" class="botoes">Multiplicar</button>
+
+
 		</div>
 	</form>
 
 
 
 </body>
-<!--<script src="JS/calc.js"></script>-->
+<script src="JS/calc.js"></script>
 
 
 </html>

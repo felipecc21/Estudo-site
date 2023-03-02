@@ -1,54 +1,26 @@
-var operacao = prompt("Qual operação deseja realizar? ");
-	var numero1 = prompt("Insira o primeiro número: ");
-	var numero2 = prompt("Insira o segundo número: ");
-	var resultadoOperacao = 0;
+var n1 = document.querySelector('#n1');
+var n2 = document.querySelector('#n2');
+var resultado = document.querySelector('span');
 
-	//Variaveis para validar os operadores
+function somar() {
 
-	var operacoesValidasSoma = ["Soma", "Somar", "soma", "somar", "+"];
-	var operacoesValidasSubtracao = ["subtrair", "subtração", "Subtrair", "Subtração", "-"];
-	var operacoesValidasDivisao = ["Divisão", "Dividir", "divisão", "dividir", "divisao","/"]
-	var operacoesValidasMultiplicacao = ["Multiplicação", "Multiplicar", "multiplicação", "multiplicar", "*"];
+    resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value);
 
+}
 
-	// Verificando o operador
+function subtrair() {
 
-	if (operacoesValidasSoma.includes(operacao)) {
-		resultadoOperacao = soma(numero1, numero2);
-	}
-	
+    resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value);
 
-	if (operacoesValidasSubtracao.includes(operacao)) {
-		resultadoOperacao = subtracao(numero1, numero2);
-	}
+}
 
-	if (operacoesValidasDivisao.includes(operacao)) {
-		resultadoOperacao = divisao(numero1, numero2);
-	}
+function multiplicar() {
 
-	if (operacoesValidasMultiplicacao.includes(operacao)) {
-		resultadoOperacao = multiplicacao(numero1, numero2);
-	}
+    resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value);
 
+}
+function dividir() {
 
+    resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value);
 
-
-	alert("O resultado da operação é: " + resultadoOperacao);
-
-	// Funçoes
-
-	function soma(numero1, numero2) {
-		return parseInt(numero1) + parseInt(numero2);
-	}
-
-	function subtracao(numero1, numero2) {
-		return parseInt(numero1) - parseInt(numero2);
-	}
-
-	function divisao(numero1, numero2) {
-		return parseInt(numero1) / parseInt(numero2);
-	}
-
-	function multiplicacao(numero1, numero2) {
-		return parseInt(numero1) * parseInt(numero2);
-	}
+}
