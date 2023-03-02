@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decisão condicional composta</title>
+</head>
+
+<body>
+    <script lang="JavaScript">
+
+        /* Ler dois valores independentes da ordem que forem digitados e apresentá-los em ordem crescente. */
+
+        /*Definição das variáveis*/
+
+        var js_n1;
+        var js_n2;
+
+        /*Entrada de Dados*/
+
+        js_n1 = parseInt(window.prompt('Informe o valor do primeiro número:'));
+        js_n2 = parseInt(window.prompt('Informe o valor do segundo número:'));
+
+        /*Saída de Dados não classificados*/
+
+        document.write('Primeiro número digitado= ' + js_n1);
+        document.write('<br>Segundo número digitado= ' + js_n2);
+
+        /* Saída de Dados classificados*/
+
+        if (js_n1 < js_n2) {
+            document.write('<p><b>Classificação em ordem Crescente:</b> ' + js_n1 + ' e ' + js_n2 + '</p>');
+        }
+        else {
+            document.write('<p><b>Classificação em ordem Decrescente:</b> ' + js_n2 + ' e ' + js_n1 + '</p>');
+        }
+    </script>
+
+
+</body>
+
+</html>
