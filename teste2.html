@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onselectstart="return false;">
+    <fieldset name='action' id="pergunta1">
+          <legend>O Mamute</legend>
+          <p>Ele queria voar ?</p>
+          <label><input type="radio" name="resposta1" value="sim" onclick="gravarResposta1()">Sim</label>
+          <label><input type="radio" name="resposta1" value="nao" onclick="gravarResposta1()">Não</label>
+      </fieldset>
+  
+      <fieldset name='action' id="pergunta2" style="display: none;">
+          <legend>O Mamute</legend>
+          <p>Ele queria fumar ?</p>
+          <label><input type="radio" name="resposta2" value="sim" onclick="gravarResposta2()">Sim</label>
+          <label><input type="radio" name="resposta2" value="nao" onclick="gravarResposta2()">Não</label>
+      </fieldset>
+  
+      <fieldset name='action' id="pergunta3" style="display: none;">
+          <legend>O Mamute</legend>
+          <p>Ele queria beber ?</p>
+          <label><input type="radio" name="resposta3" value="sim" onclick="gravarResposta3()">Sim</label>
+          <label><input type="radio" name="resposta3" value="nao" onclick="gravarResposta3()">Não</label>
+      </fieldset>
+  
+  <script>
+  function gravarResposta1() {
+      var resposta1 = document.querySelector('input[name="resposta1"]:checked').value;
+      console.log('Resposta 1 gravada:', resposta1);
+      document.getElementById('pergunta1').style.display = 'none';
+      document.getElementById('pergunta2').style.display = 'block';
+      document.querySelector('input[name="resposta1"]:checked').checked = false;
+  }
+  
+  function gravarResposta2() {
+      var resposta2 = document.querySelector('input[name="resposta2"]:checked').value;
+      console.log('Resposta 2 gravada:', resposta2);
+      document.getElementById('pergunta2').style.display = 'none';
+      document.getElementById('pergunta3').style.display = 'block';
+      document.querySelector('input[name="resposta2"]:checked').checked = false;
+  }
+  
+  function gravarResposta3() {
+      var resposta3 = document.querySelector('input[name="resposta3"]:checked').value;
+      console.log('Resposta 3 gravada:', resposta3);
+      document.getElementById('pergunta3').style.display = 'none';
+      document.getElementById('pergunta4').style.display = 'block';
+      document.querySelector('input[name="resposta3"]:checked').checked = false;}
+  
+  </script>
+  </body>
+</html>
