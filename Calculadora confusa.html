@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Essa calculadora faltou as aulas de matemática, portanto nunca se sabe se ela ira acertar ou não. <br> 
+    <hr>
+    Primeiro numero
+    <input id="n1" type="number"/>
+    Segundo numero
+    <input id="n2" type="number"/>
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()" >Subtrair</button>
+    <button onclick="multiplicar()" >Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+    O resultado é <span></span>
+<script>
+
+var n1 = document.querySelector('#n1');
+var n2 = document.querySelector('#n2');
+var resultado = document.querySelector('span')
+
+
+function somar(){
+    let naleatorio = Math.floor(Math.random() * 11);
+
+    resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value) + naleatorio;
+}
+
+function subtrair(){
+    let naleatorio = Math.floor(Math.random() * 11);
+
+resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value) + naleatorio;
+}
+
+function multiplicar(){
+    let naleatorio = Math.floor(Math.random() * 11);
+
+resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value) + naleatorio;
+}
+
+function dividir(){
+    let naleatorio = Math.floor(Math.random() * 11);
+
+resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value) + naleatorio;
+}
+
+
+</script>
+
+</body>
+
+</html>
