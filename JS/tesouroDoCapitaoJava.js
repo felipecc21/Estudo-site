@@ -28,19 +28,23 @@ function atualizarPosicoes() {
     });
 }
 
-// função para exibir o X
+
+
+
 function exibirImagem() {
     let objc = document.getElementById("c1");
     let objx = document.getElementById("x1");
     let objy = document.getElementById("y1");
-    let imgSrc = './img/X.png'; //  imagem do X
+    let imgSrc = './img/X.png'; //  imagem desejada
     let imgHtml = `<img src="${imgSrc}" alt="imagem" width="100" height="100">`;
     
-    objc.style.left = `${objx.value}px`;
-    objc.style.top = `${objy.value}px`;
-    objc.innerHTML = imgHtml;
+    if (objx.value > window.innerWidth - 100 || objy.value > window.innerHeight - 100) {
+        alert("O tesouro está além dos domínios do Capitão Java.");
+    } else {
+        objc.style.left = `${objx.value}px`;
+        objc.style.top = `${objy.value}px`;
+        objc.innerHTML = imgHtml;
+    }
 }
-
-
-
+  
 
