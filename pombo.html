@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pegue o pombo</title>
+    <style>
+
+body {
+    background-image: url("./img/back-pombo.jpg");
+}
+
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        img.clicked {
+            position: absolute;
+            top: '' /* nova posição vertical da imagem */;
+            left: '' /* nova posição horizontal da imagem */;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Pegue o pombo</p>
+    <img id="myImage" src="./img/pombo.PNG" width="100" height="100">
+
+    <script>
+        var image = document.getElementById("myImage");
+        image.addEventListener("click", function () {
+            var x = Math.floor(Math.random() * (window.innerWidth - image.width));
+            var y = Math.floor(Math.random() * (window.innerHeight - image.height));
+            image.style.top = y + "px";
+            image.style.left = x + "px";
+            image.classList.add("clicked");
+        });
+		
+    </script>
+</body>
+
+</html>

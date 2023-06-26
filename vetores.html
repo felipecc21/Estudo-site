@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetores</title>
+</head>
+<body>
+    <script>
+var numeros = [ ];
+
+// Chama a função soliticaPrimeiroNumero para solicitar o primeiro número e atribuí-lo ao primeiro elemento do array numeros
+numeros[0] = soliticaPrimeiroNumero();
+
+// Chama a função soliticaSegundoNumero para solicitar o segundo número e atribuí-lo ao segundo elemento do array numeros
+numeros[1] = soliticaSegundoNumero();
+
+// Chama a função divida passando o array numeros como argumento e atribui o resultado à variável resultadoDivisao
+var resultadoDivisao = divida(numeros);
+
+// Exibe o resultado da divisão em um alerta
+alert('O resultado da divisão é igual a: ' + resultadoDivisao); 
+
+
+// Função que solicita o primeiro número ao usuário
+function soliticaPrimeiroNumero(){
+     //Declaração e atribuição de variável. Ela receberá o número inserido pelo usuário
+     var numero1 = prompt("Insira o primeiro número: ");
+     
+     //Condição para verificar se o número é positivo.
+     //Caso não, o retorno da função será chamar a própria função novamente.
+     //  Esta operação será repetida até que um número válido seja inserido.
+     //Caso sim, retorna o valor inserido pelo usuário
+     if(numero1 < 0){
+         alert("O número precisa ser inteiro e positivo");
+         
+         //Este tipo de retorno, onde a própria função é chamada novamente, é conhecido como recursividade
+         return soliticaPrimeiroNumero();
+     }else{
+         return numero1;
+     }
+ }
+ 
+// Função que solicita o segundo número ao usuário (comportamento similar à soliticaPrimeiroNumero())
+ function soliticaSegundoNumero(){
+     var numero2 = prompt("Insira o segundo número: ");
+     
+     if(numero2 < 0){
+         alert("O número precisa ser inteiro e positivo");
+         return soliticaSegundoNumero();
+     }else{
+         return numero2;
+     }
+ }
+ 
+// Função que recebe um array com dois números e os divide, retornando o resultado da divisão
+ function divida(numeros){
+     var resultado = 0;
+     
+     //Os números a serem divididos são acessados através dos índices do array
+     resultado = numeros[0] / numeros[1];
+     return resultado;
+ }
+
+    </script>
+</body>
+</html>
